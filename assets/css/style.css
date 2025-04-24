@@ -1,0 +1,326 @@
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000000;
+}
+
+header {
+    margin-left: 140px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_details {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+.logo {
+    margin-bottom: 20px;
+    justify-content: left;
+    margin-left: 50px;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.card-image {
+    margin-bottom: 20px;
+}
+
+.card-image img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input[type="tel"] {
+    width: 360px;
+    padding: 3px 3px 3px 14px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid rgba(227, 227, 227);
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+label input {
+    margin-right: 10px;
+}
+
+button {
+    width: 140px;
+    padding: 10px 20px;
+    margin-bottom: 100px;
+    background-color: #FB3800;
+    color: #fff;
+    border: none;
+    border-radius: 300px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000000;
+}
+
+
+
+/* Tablettes (écran ≤ 768px) */
+@media (max-width: 768px) {
+    header {
+        padding-top: 50px;
+        margin-left: 0px; 
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    input[type="tel"] {
+        width: 50%; 
+    }
+
+    button {
+        width: 120px; 
+    }
+}
+
+/* Mobiles (écran ≤ 480px) */
+@media (max-width: 480px) {
+    header {
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+    .container_details{
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    button {
+        margin-top: 20px;
+        width: 40%; 
+        padding: 10px 5px;
+        font-size: 15px;
+    }
+
+    input[type="tel"] {
+        width: 80%; 
+    }
+}
+
+
+                        /* Styles pour la page Aide */
+
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.form-group label span {
+    color: red;
+    font-weight: bold;
+}
+
+input[type="password"] {
+    width: 360px;
+    padding: 3px 3px 3px 14px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid rgba(227, 227, 227);
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+
+.forgot-password {
+    color: black;
+    text-align: right;
+    font-size: 13px;
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+
+}
+h6 {
+    color: black;
+}
+
+@media (max-width: 480px) {
+.container_password{
+    margin: 0px ;
+}
+
+.container_password label{
+    display: block;
+   font-size: 20px
+}
+
+.forgot-password{
+    text-align: right;
+    margin: 0px;
+}
+
+input[type="texte"] {
+    width: 80%; 
+}
+
+.sms-code{
+    display:block;
+    margin-top:30px;
+}
+}
+
+
+        /* Page pour entrer le code SMS */
+
+
+
+
+/* Styles pour la page de connexion */
+
+header .logo img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+
+form {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="text"] {
+    width: 360px;
+    padding: 3px 3px 3px 14px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid rgba(227, 227, 227);
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+
+
+.promo-image {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+/* Error Message */
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+ 
+
+}
+
+@media (max-width: 480px) {
+    .header .logo {
+        max-width: 120px;
+    }
+
+  
+}
+
+
+.footer {
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center; 
+    padding: 20px 0; 
+    font-size: 14px; 
+    border-top: 1px solid #ddd; 
+  }
+  
+  .footer a {
+    color: black; 
+  }
+  
+  .footer a:hover {
+    text-decoration: underline; 
+  }
+  

